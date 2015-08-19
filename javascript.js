@@ -7,7 +7,8 @@ var Train = {
 
 var start = document.getElementById(startpoint);
 var end = document.getElementById(endpoint)
- 
+
+//add event listener when the drop downs are CHANGED not 'clicked' 
 end.addEventListener('change', function(e){
   startIndex = Train.lineN.indexOf(start.value)
   endIndex = Train.lineN.indexOf(end.value)
@@ -20,8 +21,19 @@ e.preventDefault;
 
 var result = Math.abs(startIndex - endIndex);
 document.getElementById('answer').innerHTML = result;
-  console.log(result);
+  console.log('result' + result);
 });
+
+//Tell the computer that there is a line change because of duplicate destinations.
+//Result will be for Line L
+function lineChange(destination) {
+  var destinationLine
+  if (Train.lineN.contains(destination)) === true) {
+  destinationLine = 'lineL';
+  console.log(lineChange);
+};
+}
+
 };
 // var result = Math.abs(lineN.indexOf(start)) - (lineN.indexOf(end));
 //   console.log(result);
