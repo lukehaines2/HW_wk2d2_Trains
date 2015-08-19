@@ -5,16 +5,21 @@ var Train = {
  'line6': ['Grand Central', '33rd', '6-28th', 'n-23rd', '6-Union Square', 'Astor Place']
 };
 
+//Define the choice in dropdown
 var start = document.getElementById(startpoint);
 var end = document.getElementById(endpoint)
+console.log(start)
+console.log(end)
 
 //add event listener when the drop downs are CHANGED not 'clicked' 
 var end.addEventListener('change', function(e){
   startIndex = Train.lineN.indexOf(start.value)
   endIndex = Train.lineN.indexOf(end.value)
+  
+//Test everything
   console.log(startIndex)
   console.log(endIndex)
-
+  console.log(end)
 
 e.preventDefault;
 
@@ -35,12 +40,12 @@ function lineChange(destination) {
 };
 }
 
-
+//Code to get button DIV displaying like in BMI
 var basicAnswer = document.getElementById("answer");
 
-  basicAnswer.className = "show";
+basicAnswer.className = "show";
 
-  document.getElementById("basic-answer-alert").innerHTML = "The answer is : " + answer;
+document.getElementById("basic-answer-alert").innerHTML = "The answer is : " + answer;
 
 };
 // var result = Math.abs(lineN.indexOf(start)) - (lineN.indexOf(end));
