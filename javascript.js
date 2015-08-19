@@ -9,7 +9,7 @@ var start = document.getElementById(startpoint);
 var end = document.getElementById(endpoint)
 
 //add event listener when the drop downs are CHANGED not 'clicked' 
-end.addEventListener('change', function(e){
+var end.addEventListener('change', function(e){
   startIndex = Train.lineN.indexOf(start.value)
   endIndex = Train.lineN.indexOf(end.value)
   console.log(startIndex)
@@ -21,6 +21,7 @@ e.preventDefault;
 
 var result = Math.abs(startIndex - endIndex);
 document.getElementById('answer').innerHTML = result;
+  result.className = "show";
   console.log('result' + result);
 });
 
@@ -33,6 +34,13 @@ function lineChange(destination) {
   console.log(lineChange);
 };
 }
+
+
+var basicAnswer = document.getElementById("answer");
+
+  basicAnswer.className = "show";
+
+  document.getElementById("basic-answer-alert").innerHTML = "The answer is : " + answer;
 
 };
 // var result = Math.abs(lineN.indexOf(start)) - (lineN.indexOf(end));
